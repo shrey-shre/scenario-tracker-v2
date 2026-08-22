@@ -1,0 +1,323 @@
+/* =====================================================
+   GLOBAL BASE STYLES
+===================================================== */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+  color: #222;
+}
+
+header {
+  background: #1f2937;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+main {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 0 16px;
+}
+
+.hidden {
+  display: none;
+}
+
+
+/* =====================================================
+   CARDS / CONTAINERS
+===================================================== */
+
+.card {
+  background: white;
+  padding: 18px;
+  margin-bottom: 16px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.home-item,
+.participant-item,
+.log-item {
+  padding: 12px;
+  margin-bottom: 10px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+}
+
+
+/* =====================================================
+   FORMS / INPUTS
+===================================================== */
+
+.row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+input {
+  flex: 1;
+  padding: 12px;
+  font-size: 16px;
+}
+
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+button {
+  padding: 12px 16px;
+  margin: 6px 4px 6px 0;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #2563eb;
+  color: white;
+}
+
+.danger-btn {
+  background: #dc2626;
+  color: white;
+}
+
+.home-item button,
+.participant-item button {
+  margin-top: 8px;
+}
+
+
+/* =====================================================
+   EVENT SET BUTTONS
+===================================================== */
+
+#setButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.active-set {
+  background: #111827;
+}
+
+
+/* =====================================================
+   EVENT CHECKLIST
+===================================================== */
+
+.event-row {
+  display: block;
+  padding: 14px;
+  margin-bottom: 10px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+}
+
+.current-event {
+  border: 2px solid #2563eb;
+  background: #eff6ff;
+}
+
+.event-row span {
+  color: #374151;
+}
+
+
+/* =====================================================
+   SAVED TIMESTAMP DISPLAY
+===================================================== */
+
+.event-timestamp {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #374151;
+  line-height: 1.4;
+}
+
+.timestamp-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 24px;
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.duration-row {
+  grid-column: span 2;
+  margin-top: 4px;
+}
+
+
+/* =====================================================
+   INLINE TIMER PANEL
+===================================================== */
+
+.inline-timer {
+  margin-top: 14px;
+  padding: 16px;
+  border-radius: 12px;
+  background: white;
+  border: 1px solid #bfdbfe;
+}
+
+.inline-timer h2 {
+  font-size: 24px;
+  margin: 0 0 12px;
+}
+
+#inlineStopwatchDisplay {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 10px 0 16px;
+}
+
+.inline-buffer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.inline-buffer-grid label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.inline-buffer-grid input {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   TIMER BUTTONS
+===================================================== */
+
+.timer-action-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin: 12px 0;
+}
+
+.timer-main-btn {
+  font-size: 24px;
+  font-weight: bold;
+  padding: 22px;
+  border-radius: 12px;
+}
+
+.start-main,
+#inlineStartBtn {
+  background: #16a34a;
+  color: white;
+}
+
+.stop-main,
+#inlineStopBtn {
+  background: #dc2626;
+  color: white;
+}
+
+.save-next-btn,
+#inlineSaveBtn {
+  width: 100%;
+  margin-top: 8px;
+  background: #2563eb;
+  color: white;
+}
+
+
+/* =====================================================
+   MOBILE LAYOUT
+===================================================== */
+
+@media (max-width: 600px) {
+  main {
+    padding: 0 10px;
+  }
+
+  .card {
+    padding: 14px;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  button {
+    min-height: 48px;
+  }
+
+  .inline-buffer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .timestamp-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .duration-row {
+    grid-column: span 1;
+  }
+}
+
+.completed-event {
+  background: #ecfdf5;
+  border: 1px solid #22c55e;
+}
+
+.incomplete-event {
+  background: #fef2f2;
+  border: 1px solid #ef4444;
+}
+
+.current-event {
+  border: 3px solid #2563eb !important;
+}
+
+.timer-settings-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.timer-settings-grid label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.timer-settings-grid input {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.reset-main {
+  background: #6b7280;
+  color: white;
+}
+
+.save-main {
+  background: #2563eb;
+  color: white;
+}
+
+@media (max-width: 600px) {
+  .timer-settings-grid {
+    grid-template-columns: 1fr;
+  }
+}

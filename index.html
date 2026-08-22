@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Scenario Tracker</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header>
+    <h1>Gait Scenario Tracker</h1>
+    <p>Track participant scenario timestamps</p>
+</header>
+
+<main>
+    <section id="homePage" class="card">
+    <h2>Homes</h2>
+
+    <div class="row">
+        <input id="newHomeInput" type="text" placeholder="Enter home name, ex: House A" />
+        <button id="addHomeBtn">Add Home</button>
+    </div>
+
+    <div id="homesList"></div>
+    </section>
+
+    <section id="homeDetailsPage" class="card hidden">
+    <button id="backToHomesBtn">← Back to Homes</button>
+    <h2 id="selectedHomeTitle"></h2>
+
+    <button id="exportHomeCsvBtn">Export This Home CSV</button>
+
+    <div class="row">
+        <input id="newParticipantInput" type="text" placeholder="Enter participant, ex: P1" />
+        <button id="addParticipantBtn">Add Participant</button>
+    </div>
+
+    <h3>Participants</h3>
+    <div id="participantsList"></div>
+    </section>
+
+    <section id="trackerPage" class="card hidden">
+    <button id="backToHomeDetailsBtn">← Back to Participants</button>
+
+    <h2 id="trackerTitle"></h2>
+
+    <h3>Event Set</h3>
+    <div id="setButtons"></div>
+
+    <h3>Event Checklist</h3>
+    <div id="eventChecklist"></div>
+
+    
+
+    <h3>Timestamp Log</h3>
+    <div id="logList"></div>
+    
+    </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
