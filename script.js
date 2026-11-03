@@ -457,12 +457,12 @@ function renderEventChecklist() {
           <div class="timer-settings-grid">
             <label>
               Buffer before:
-              <input id="inlineBufferBeforeInput" type="number" value="3" min="0">
+              <input id="inlineBufferBeforeInput" type="number" value="1" min="0">
             </label>
 
             <label>
               Buffer after:
-              <input id="inlineBufferAfterInput" type="number" value="3" min="0">
+              <input id="inlineBufferAfterInput" type="number" value="1" min="0">
             </label>
 
             <label>
